@@ -1,6 +1,6 @@
 async function fetchLeaderboard() {
     try {
-      const response = await fetch('http://server.lrlr.fr:8080/');
+      const response = await fetch('http://server.lrlr.fr/');
       const data = await response.json();
 
       const leaderboardDiv = document.getElementById('ranking-container');
