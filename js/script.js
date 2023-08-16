@@ -12,10 +12,13 @@ async function fetchLeaderboard() {
         const userDiv = document.createElement('div');
         userDiv.classList.add('user-entry'); // Ajouter une classe CSS pour le style
         userDiv.innerHTML = `
-        <p id="rank"><strong>#${userNumber}</strong></p> <!-- Numéro qui augmente -->
+        <img class="avatar" src="${user.avatarURL}" alt="PP de ${user.userName}">
+        <div class="user-details">
+          <p id="rank"><strong>#${userNumber}</strong></p> <!-- Numéro qui augmente -->
           <p><strong>Utilisateur:</strong> ${user.userName}</p>
           <p><strong>Niveau:</strong> ${user.level}</p>
           <p><strong>XP:</strong> ${user.xp}</p>
+        </div>
         `;
         leaderboardDiv.appendChild(userDiv);
         userNumber++; // Incrémenter le compteur pour le prochain utilisateur
