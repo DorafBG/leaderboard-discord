@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Couleur de fond agréable */
+  background-color: #f5f5f5be; /* Couleur de fond agréable */
 
   background-image: url('../img/Image17.jpg');
   background-size: cover; /* Ajuster la taille de l'image pour couvrir toute la fenêtre */
@@ -10,12 +10,12 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 65em;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background-color: #fff; /* Couleur de fond pour le contenu */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  background-color: rgba(255, 255, 255, 0.712);; /* Couleur de fond pour le contenu */
+  /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); /* Légère ombre */
   
 }
 
@@ -28,6 +28,16 @@ header {
   
   h1 {
     color: #333;
+    font-weight: bold;
+    font-size: 3.2em;
+    text-decoration: underline;
+
+    
+  }
+
+  #logodoraf{
+    width: 7em; /* Ajustez la taille de l'image comme nécessaire */
+    height: 7em;
   }
   
   #ranking-container {
@@ -68,6 +78,17 @@ header {
     margin: 1.2em;
     background-color: #f9f9f9;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    align-items: center; /* Aligner verticalement */
+  }
+
+
+  .avatar {
+    width: 100px; /* Ajustez la taille de l'image comme nécessaire */
+    height: 100px;
+    margin-right: 10px; /* Espacement entre l'image et les informations */
+    border-radius: 100%;
   }
 
   #rank{
