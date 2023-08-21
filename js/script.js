@@ -1,3 +1,17 @@
+function calculateAllXp(targetLevel) {
+  let totalXp = 0;
+  for (let level = 1; level < targetLevel; level++) {
+      totalXp += (5 * (level ** 2)) + (50 * level) + 100;
+  }
+
+  if(targetLevel === 0){
+    return totalXp;
+  } else {
+    return totalXp+100;
+  }
+ 
+}
+
 async function fetchLeaderboard() {
     try {
       const response = await fetch('http://server.lrlr.fr/');
@@ -11,6 +25,8 @@ async function fetchLeaderboard() {
       data.forEach(user => {
         const userDiv = document.createElement('div');
         userDiv.classList.add('user-entry'); // Ajouter une classe CSS pour le style
+        const totalXpRequired = calculateAllXp(user.level) + user.xp;
+        const totalXpString = totalXpRequired.toLocaleString();
         userDiv.innerHTML = `
         <img class="avatar" src="${user.avatarURL}" alt="PP de ${user.userName}">
         <div class="user-details">
@@ -19,7 +35,10 @@ async function fetchLeaderboard() {
           <p><strong>Niveau:</strong> ${user.level}</p>
           <p><strong>XP:</strong> ${user.xp}</p>
         </div>
-        `;
+        <div class="total-xp">
+          <p><strong>${totalXpString} xp total</p>
+        </div>
+      `;
         leaderboardDiv.appendChild(userDiv);
         userNumber++; // Incrémenter le compteur pour le prochain utilisateur
       });
