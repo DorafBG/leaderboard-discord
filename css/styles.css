@@ -121,8 +121,8 @@ header {
     border: .25em solid var(--glow-color);
 
     padding: 0.5em;
-    padding-left: 3em;
-    padding-right: 3em; 
+    padding-left: 1em;
+    padding-right: 1em; 
     font-size: 2em;
     cursor: pointer;
 
