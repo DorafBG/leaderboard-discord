@@ -14,7 +14,7 @@ function calculateAllXp(targetLevel) {
 
 async function fetchLeaderboard() {
     try {
-      const response = await fetch('https://server.lrlr.fr/');
+      const response = await fetch('https://doraf.alwaysdata.net/');
       const data = await response.json();
 
       const leaderboardDiv = document.getElementById('ranking-container');
